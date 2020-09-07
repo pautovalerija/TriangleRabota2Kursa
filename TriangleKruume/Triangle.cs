@@ -97,40 +97,36 @@ namespace TriangleKruume
                 else return false;
             }
         }
-        public bool ostrii
+        public bool ravnostor
         {
             
             get
                 
             {
-                c = c * c;
-                a = a * a;
-                b = b * b;
-                if ((c < a + b || a < c + b || b < a + c))
+                
+                if (c == a && c == b && a==c && a==b && b==a && b==c)
                     return true;
                 else return false;
             }
 
         }
-        public bool tupoi
+        public bool ravnobedr
         {
             get
             {
-                c = c * c;
-                a = a * a;
-                b = b * b;
-                if ((c>a+b || a > c + b || b > a + c))
+                
+                if ((c==a && c!=b || b == c && a!=b || b == a && b!= c))
                     return true;
                 else return false;
             }
 
         }
-        public bool pramoi
+        public bool raznostor
         {
             get
             {
 
-                if ((Math.Pow(c, 2) == Math.Pow(a,2) + Math.Pow(b, 2) || Math.Pow(a, 2) == Math.Pow(c, 2) + Math.Pow(b, 2) || Math.Pow(b, 2) == Math.Pow(a, 2) + Math.Pow(c, 2)))
+                if (c != a && c != b && a != c && a != b && b != a && b != c)
                     return true;
                 else return false;
             }
